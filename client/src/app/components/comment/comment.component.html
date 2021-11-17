@@ -1,0 +1,11 @@
+<div *ngIf="comment">
+    <hr>
+    <div>
+        <h2>{{comment.userEmail}}</h2>
+    </div>
+    <div>
+        <p>{{comment.body}}</p>
+    </div>
+    <app-button color="firebrick" text="Delete" (dtnClicked)="delete()"></app-button>
+</div>
+

@@ -1,0 +1,21 @@
+ <div *ngIf="postDetails" class="">
+    <a [routerLink]="['/']">Back to posts</a>
+    <hr>
+    <div> 
+        <h3>Title</h3>
+        <h2>{{postDetails.title}}</h2>
+    </div>
+    <div>
+        <h3>Details</h3>
+        <p>{{postDetails.body}}</p>
+    </div>
+
+ </div>
+ <div>
+     
+     <h2>Comments:</h2>
+     <app-comment *ngFor="let item of comments" [comment]="item" (onDelete)="deleteComment(item)" ></app-comment>
+     
+ </div>
+ <app-add-comment [postId]="getPostId()" (onAddComment)="createComment($event)"></app-add-comment>
+

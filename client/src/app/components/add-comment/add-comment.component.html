@@ -1,0 +1,23 @@
+<h2>Add comment</h2>
+<form  class="add-form" (ngSubmit)="onSubmit()" >
+    <div class="form-control">
+        <label for="userName">User name</label>
+        <input type="text" name="userName" id="userName"
+        [(ngModel)]="userName"
+         placeholder="Add User Name">
+    </div>
+    <div class="form-control">
+        <label for="userEmail">Email</label>
+        <input type="text" name="userEmail" id="userEmail"
+        [(ngModel)]="userEmail"
+         placeholder="Add Email">
+    </div>
+    <div class="form-control">
+        <label for="body">Body</label>
+        <input type="text" name="body" id="body"
+        [(ngModel)]="body"
+         placeholder="Add body">
+    </div>
+   
+    <input type="submit" value="Save" class="btn btn-block">
+</form>
